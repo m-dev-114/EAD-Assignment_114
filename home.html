@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Dev</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="name">
+            <h1>Dev-114</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#services" onclick="showSection('services')">Services</a></li>
+                <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact Me</a></li>
+                <li><a href="resume_dev.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <section id="home" class="section active" >
+        <h2>Welcome to My <span style="color:rgb(35, 191, 202);">Portfolio</span></h2>
+        <p style="font-size: 72px; font-weight: bold;">I am <span style="color: rgb(35, 191, 202);">Dev</span>.</p> 
+    </section>
+
+    <section id="about" class="section">
+        <div class="aboutclass"> <!-- Wrapper to handle flex -->
+        
+            
+            <p id="homepara">
+                I'm <span style="color: rgb(35, 191, 202);">Dev</span>, an IT engineering student at CBIT with a strong passion for technology and innovation. My academic journey has given me a solid grounding in software development, network security, and data analysis, and I’m proficient in programming languages like Python, SQL etc.
+ I enjoy collaborating on projects and staying updated with the latest industry trends. I’m particularly interested in exploring careers in software development, cybersecurity, and data science.
+
+Outside of my studies, I’m enthusiastic about tech gadgets, photography, latest technologies. I’m always eager to learn and connect with others who share my passion for technology.
+                
+             </p>
+        </div>
+    </section>
+    
+
+    <section id="services" class="section">
+        <h2 style="color: rgb(35, 191, 202); margin:0">Services</h2>
+        <div class="serviceclass">
+            <div class="service-item" style="padding: 10px;">
+                <h3> UI/UX </h3>
+                <p style="font-size: 25px;">Providing introductory UI/UX design for your websites </p>
+                <h3>Web Development</h3>
+                <p style="font-size: 25px;">Offering beginner to intermediate web development services </p>
+            </div>
+        
+    </section>  
+
+
+    <section id="projects" class="section">
+        <h2 style="color: rgb(35, 191, 202); margin: 0;">Projects</h2>
+        <div class="projectclass">
+            <div class="project-item">
+                <h3>Real-Estate Management Website</h3>
+                <p style="font-size: 20px;">Website that help's you to find/sell properties</p>
+                <img src="real estate.png" alt="" style="width: 500px; height: 300px;">
+            </div>
+            <div class="project-item">
+                <h3>Password Generator</h3>
+                <p style="font-size: 20px;">Help's you to generate strong password</p>
+                <img src="password.png" alt="" style="width: 500px;height: 300px;">
+                
+            </div>
+        </div>
+        
+    </section>
+
+    
+    <section id="contact" class="section">
+        <h2 style="color: rgb(35, 191, 202);margin: 0;">Contact Me</h2>
+        <div class="contactform">
+           
+            <form id="contact-form">
+                <h3>Fill this to contact me</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dev. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId){
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            // Show the selected section
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home'); // Show the home section by default
+        });
+    </script>
+</body>
+</html>
